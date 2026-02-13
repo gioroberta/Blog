@@ -1,22 +1,24 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Cadastro from "./pages/home/cadastro/Cadastro";
+import Login from "./pages/home/login/Login";
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-    <Navbar />
-    <div className="min-h-[80v]">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
-    </div>
-    <Footer/>
-    </BrowserRouter>
-
+      <BrowserRouter>
+        <Navbar />
+        <div className="min-h-[80v]">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
