@@ -101,7 +101,7 @@ function FormTema() {
         {id === undefined ? "Cadastrar Tema" : "Editar Tema"}
       </h1>
 
-      <form className="w-1/2 flex flex-col gap-4">
+      <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
         <div className="flex flex-col gap-2">
           <label htmlFor="descricao">Descrição do Tema</label>
           <input
