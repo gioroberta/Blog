@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+import FormPostagem from "./components/postagem/formpostagem/FormPostagem";
+import ListaPostagens from "./components/postagem/listapostagens/ListaPostagens";
 import DeletarTema from "./components/tema/deletartema/DeletarTema";
 import FormTema from "./components/tema/formtema/FormTema";
 import ListaTemas from "./components/tema/listatemas/ListaTemas";
@@ -8,7 +10,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import Home from "./pages/home/Home";
 import Cadastro from "./pages/home/cadastro/Cadastro";
 import Login from "./pages/home/login/Login";
-import ListaPostagens from "./components/postagem/listapostagens/ListaPostagens";
+import DeletarPostagem from "./components/postagem/deletarpostagem/DeletarPostagem";
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
               <Route path="/editartema/:id" element={<FormTema />} />
               <Route path="/deletartema/:id" element={<DeletarTema />} />
               <Route path="/postagens" element={<ListaPostagens />} />
+              <Route path="/cadastrarpostagem" element={<FormPostagem />} />
+              <Route path="/editarpostagem/:id" element={<FormPostagem />} />
+              <Route
+                path="/deletarpostagem/:id"
+                element={<DeletarPostagem />}
+              />
             </Routes>
           </div>
           <Footer />
