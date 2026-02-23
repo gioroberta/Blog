@@ -1,13 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+import DeletarTema from "./components/tema/deletartema/DeletarTema";
 import FormTema from "./components/tema/formtema/FormTema";
 import ListaTemas from "./components/tema/listatemas/ListaTemas";
 import { AuthProvider } from "./contexts/AuthContext";
 import Home from "./pages/home/Home";
 import Cadastro from "./pages/home/cadastro/Cadastro";
 import Login from "./pages/home/login/Login";
-import DeletarTema from "./components/tema/deletartema/DeletarTema";
+import ListaPostagens from "./components/postagem/listapostagens/ListaPostagens";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/cadastrartema" element={<FormTema />} />
               <Route path="/editartema/:id" element={<FormTema />} />
               <Route path="/deletartema/:id" element={<DeletarTema />} />
+              <Route path="/postagens" element={<ListaPostagens />} />
             </Routes>
           </div>
           <Footer />
