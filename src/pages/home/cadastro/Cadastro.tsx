@@ -79,7 +79,7 @@ function Cadastro() {
               type="text"
               id="nome"
               name="nome"
-              placeholder="Seu nome aqui..."
+              placeholder="Digite seu nome"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -94,7 +94,7 @@ function Cadastro() {
               type="text"
               id="usuario"
               name="usuario"
-              placeholder="Seu usuario aqui..."
+              placeholder="Digite seu usuário"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -109,7 +109,7 @@ function Cadastro() {
               type="text"
               id="foto"
               name="foto"
-              placeholder="Sua foto aqui..."
+              placeholder="Digite o URL da sua foto"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.foto}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -124,7 +124,7 @@ function Cadastro() {
               type="password"
               id="senha"
               name="senha"
-              placeholder="Sua senha aqui..."
+              placeholder="Digite sua senha"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
