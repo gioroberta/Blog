@@ -4,6 +4,7 @@ import { ClipLoader } from "react-spinners";
 import { AuthContext } from "../../../contexts/AuthContext";
 import type { Tema } from "../../../models/Tema";
 import { buscar, deletar } from "../../../services/Service";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function DeletarTema() {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ function DeletarTema() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado");
+      ToastAlerta("Você precisa estar logado!", "erro");
       navigate("/");
     }
   }, [token]);
@@ -54,12 +55,12 @@ function DeletarTema() {
         },
       });
 
-      alert("Tema deletado com sucesso");
+      ToastAlerta("Tema deletado com sucesso!", "sucesso");
     } catch (error: any) {
       if (error.toString().includes("401")) {
         handleLogout();
       } else {
-        alert("Erro ao deletar o tema.");
+        ToastAlerta("Erro ao deletar o tema!", "erro");
       }
     }
 
